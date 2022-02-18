@@ -59,7 +59,6 @@ window.addEventListener('DOMContentLoaded', function(event) {
         background-size: cover;
         background-color: transparent;
       `
-
       for (let i = 0; i < cells.length; i++) {
         if (event.target === cells[i]) {
           if(gamer === 1) {
@@ -84,7 +83,7 @@ window.addEventListener('DOMContentLoaded', function(event) {
               stack2.push(i)
             }
             if(winCombination.some(el => el.every(el => stack2.includes(el)))) {
-              info.innerHTML = 'Игра окончена'
+              info.innerText = 'Игра окончена'
               
               closeBtn.style.display = 'inline-block'
               message.textContent = 'Выиграл игрок 2'
@@ -92,7 +91,16 @@ window.addEventListener('DOMContentLoaded', function(event) {
               dialog.showModal()
             }
           }
+          
           if(cells[i].childElementCount < 1) cells[i].appendChild(xOr0)
+          if(stack1.length + stack2.length === 9 && !winCombination.some(el => el.every(el => stack2.includes(el)))) {
+              info.innerText = 'Игра окончена'
+              
+              closeBtn.style.display = 'inline-block'
+              message.textContent = 'Ничья'
+
+              dialog.showModal()
+          }
         }
       }
     if(info.innerText !== 'Игра окончена') info.innerText = `Ход игрока ${gamer}`
