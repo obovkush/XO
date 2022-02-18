@@ -101,3 +101,38 @@ dialog::backdrop {
   margin-top: 10%;
   padding: 5% 7%;
 }
+
+
+@media (max-width: 768px) {
+
+  .container {
+    max-width: 768px;
+  }
+  
+  .field {
+    width: 450px;
+    height: 450px;
+  }
+
+  .cell {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 500px) {
+
+  .container {
+    max-width: 500px;
+  }
+  
+  .field {
+    width: 300px;
+    height: 300px;
+  }
+
+  .cell {
+    width: 100px;
+    height: 100px;
+  }
+}
