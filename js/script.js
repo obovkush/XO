@@ -93,7 +93,9 @@ window.addEventListener('DOMContentLoaded', function(event) {
           }
           
           if(cells[i].childElementCount < 1) cells[i].appendChild(xOr0)
-          if(stack1.length + stack2.length === 9 && !winCombination.some(el => el.every(el => stack2.includes(el)))) {
+          if( stack1.length + stack2.length === 9 &&
+              !winCombination.some(el => el.every(el => stack1.includes(el))) && 
+              !winCombination.some(el => el.every(el => stack2.includes(el))) ) {
               info.innerText = 'Игра окончена'
               
               closeBtn.style.display = 'inline-block'
