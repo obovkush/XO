@@ -57,6 +57,7 @@ window.addEventListener('DOMContentLoaded', function(event) {
         text-align: center;
         pointer-events: none;
         background-size: cover;
+        background-repeate: no-repeate;
         background-color: transparent;
       `
       for (let i = 0; i < cells.length; i++) {
