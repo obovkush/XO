@@ -7,6 +7,6 @@ XO Mini Game
 
 <p>&nbsp;</p>
 
-
+[![Demo XO](/img/XO.gif)]
 
 ### Поиграть можно по [ссылке](https://obovkush.github.io/XO)
